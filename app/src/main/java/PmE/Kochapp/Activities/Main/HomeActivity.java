@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import PmE.Kochapp.Activities.CategoryList.CategoryBreakfastActivity;
+import PmE.Kochapp.Activities.CategoryList.CategoryDessertActivity;
+import PmE.Kochapp.Activities.CategoryList.CategoryMeatActivity;
 import PmE.Kochapp.Activities.CategoryList.CategoryPastaActivity;
+import PmE.Kochapp.Activities.CategoryList.CategoryVeganActivity;
 import PmE.Kochapp.Adaptors.CategoryAdapter;
 import PmE.Kochapp.Adaptors.PopularAdapter;
 import PmE.Kochapp.Domains.CategoryDomain;
@@ -70,15 +73,15 @@ public class HomeActivity extends AppCompatActivity{
                 }
                 else if ( position == 2) {
                     // if clicked on Vegetarian -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class ) );
+                    startActivity ( new Intent (HomeActivity.this, CategoryVeganActivity.class ) );
                 }
                 else if ( position == 3) {
                     // if clicked on Meat -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class ) );
+                    startActivity ( new Intent (HomeActivity.this, CategoryMeatActivity.class ) );
                 }
                 else if ( position == 4) {
                     // if clicked on Dessert -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class ) );
+                    startActivity ( new Intent (HomeActivity.this, CategoryDessertActivity.class ) );
                 }
             }
         };

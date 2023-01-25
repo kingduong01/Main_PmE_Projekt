@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import PmE.Kochapp.Activities.Recipes.BowlActivity;
-import PmE.Kochapp.Activities.Recipes.FrenchToastActivity;
-import PmE.Kochapp.Activities.Recipes.PancakeActivity;
+import PmE.Kochapp.Activities.Recipes.Breakfast.BowlActivity;
+import PmE.Kochapp.Activities.Recipes.Breakfast.FrenchToastActivity;
+import PmE.Kochapp.Activities.Recipes.Breakfast.PancakeActivity;
 import PmE.Kochapp.Adaptors.CategoryBreakfastAdapter;
 import PmE.Kochapp.Domains.CategoryBreakfastDomain;
 import PmE.Kochapp.R;
