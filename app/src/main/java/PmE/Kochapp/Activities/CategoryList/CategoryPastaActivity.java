@@ -17,6 +17,11 @@ import PmE.Kochapp.R;
 
 import java.util.ArrayList;
 
+/*
+ * Class     : CategoryPastaActivity
+ * Methods   : recyclerViewPasta(), setCategoryPastaOnclickListener()
+ *
+ * */
 public class CategoryPastaActivity extends  AppCompatActivity{
     private RecyclerView.Adapter pastaAdapter;
 
@@ -31,6 +36,13 @@ public class CategoryPastaActivity extends  AppCompatActivity{
         recyclerViewPasta();
     }
 
+    /**
+     * It's a recyclerView for the category Pasta
+     * Here the recipes are loaded into an arraylist
+     * All recipes are provided with an onclick
+     *
+     * @See List with the receipts and there information
+     * */
     private void recyclerViewPasta() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager (this, LinearLayoutManager.VERTICAL, false);
         recyclerViewPastaList = findViewById ( R.id.recyclerViewPasta);
@@ -47,6 +59,11 @@ public class CategoryPastaActivity extends  AppCompatActivity{
         recyclerViewPastaList.setAdapter ( pastaAdapter );
     }
 
+
+    /*
+     * This is the OnclickListener for the individual recipes from the Pasta category.
+     * When the user clicks on one of the recipes, he will be redirected to the corresponding page.
+     * */
     private void setCategoryPastaOnclickListener(){
         categoryPastaOnclickListener = new CategoryPastaAdapter.CategoryPastaRecyclerViewClickListener()
         {

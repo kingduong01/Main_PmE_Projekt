@@ -17,6 +17,11 @@ import PmE.Kochapp.R;
 
 import java.util.ArrayList;
 
+/**
+* Class     : CategoryVeganActivity
+* Methods   : recyclerViewVegan(), setCategoryVeganOnclickListener()
+*
+* */
 public class CategoryVeganActivity extends  AppCompatActivity{
     private RecyclerView.Adapter veganAdapter;
 
@@ -31,6 +36,13 @@ public class CategoryVeganActivity extends  AppCompatActivity{
         recyclerViewVegan();
     }
 
+    /**
+     * It's a recyclerView for the category Vegan
+     * Here the recipes are loaded into an arraylist
+     * All recipes are provided with an onclick
+     *
+     * @See      List with the receipts and there information
+     * */
     private void recyclerViewVegan() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager (this, LinearLayoutManager.VERTICAL, false);
         recyclerViewVeganList = findViewById ( R.id.recyclerViewVegan);
@@ -47,6 +59,10 @@ public class CategoryVeganActivity extends  AppCompatActivity{
         recyclerViewVeganList.setAdapter ( veganAdapter );
     }
 
+    /**
+     * This is the OnclickListener for the individual recipes from the Vegan category.
+     * When the user clicks on one of the recipes, he will be redirected to the corresponding page.
+     * */
     private void setCategoryVeganOnclickListener(){
         categoryVeganOnclickListener = new CategoryVeganAdapter.CategoryVeganRecyclerViewClickListener()
         {

@@ -17,6 +17,11 @@ import PmE.Kochapp.R;
 
 import java.util.ArrayList;
 
+/**
+ * Class     : CategoryMeatActivity
+ * Methods   : recyclerViewMeat(), setCategoryMeatOnclickListener()
+ *
+ * */
 public class CategoryMeatActivity extends  AppCompatActivity{
     private RecyclerView.Adapter meatAdapter;
 
@@ -31,6 +36,13 @@ public class CategoryMeatActivity extends  AppCompatActivity{
         recyclerViewMeat();
     }
 
+    /**
+     * It's a recyclerView for the category Meat
+     * Here the recipes are loaded into an arraylist
+     * All recipes are provided with an onclick
+     *
+     * @See      List with the receipts and there information
+     * */
     private void recyclerViewMeat() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager (this, LinearLayoutManager.VERTICAL, false);
         recyclerViewMeatList = findViewById ( R.id.recyclerViewMeat);
@@ -47,6 +59,10 @@ public class CategoryMeatActivity extends  AppCompatActivity{
         recyclerViewMeatList.setAdapter ( meatAdapter );
     }
 
+    /**
+     * This is the OnclickListener for the individual recipes from the Meat category.
+     * When the user clicks on one of the recipes, he will be redirected to the corresponding page.
+     * */
     private void setCategoryMeatOnclickListener(){
         categoryMeatOnclickListener = new CategoryMeatAdapter.CategoryMeatRecyclerViewClickListener()
         {

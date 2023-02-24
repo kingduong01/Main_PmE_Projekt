@@ -13,6 +13,11 @@ import PmE.Kochapp.Activities.CategoryList.CategoryDessertActivity;
 import PmE.Kochapp.Activities.CategoryList.CategoryMeatActivity;
 import PmE.Kochapp.Activities.CategoryList.CategoryPastaActivity;
 import PmE.Kochapp.Activities.CategoryList.CategoryVeganActivity;
+import PmE.Kochapp.Activities.Recipes.Breakfast.FrenchToastActivity;
+import PmE.Kochapp.Activities.Recipes.Dessert.CremeBruleeActivity;
+import PmE.Kochapp.Activities.Recipes.Pasta.CabonaraActivity;
+import PmE.Kochapp.Activities.Recipes.Pasta.LachsPastaActivity;
+import PmE.Kochapp.Activities.Recipes.Vegan.GemueseCurryActivity;
 import PmE.Kochapp.Adaptors.CategoryAdapter;
 import PmE.Kochapp.Adaptors.PopularAdapter;
 import PmE.Kochapp.Domains.CategoryDomain;
@@ -21,6 +26,11 @@ import PmE.Kochapp.R;
 
 import java.util.ArrayList;
 
+/*
+ * Class     : HomeActivity
+ * Methods   : recyclerViewCategory(), setCategoryOnclickListener(), recyclerViewPopular(), setPopularOnclickListener()
+ *
+ * */
 public class HomeActivity extends AppCompatActivity{
     private RecyclerView.Adapter categoryAdapter, popularAdapter;
     private RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
@@ -36,7 +46,13 @@ public class HomeActivity extends AppCompatActivity{
         recyclerViewPopular();
     }
 
-
+    /*
+     * It's a recyclerView for the single category
+     * Here the categories are loaded into an arraylist
+     * All categories are provided with an onclick
+     *
+     * @see      List with the category
+     * */
     private void recyclerViewCategory () {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager (this, LinearLayoutManager.HORIZONTAL,false );
         recyclerViewCategoryList = findViewById ( R.id.recyclerViewCategory );
@@ -54,7 +70,6 @@ public class HomeActivity extends AppCompatActivity{
 
         categoryAdapter = new CategoryAdapter ( categoryList, categoryOnclickListener );
         recyclerViewCategoryList.setAdapter ( categoryAdapter );
-
     }
 
 
@@ -72,15 +87,15 @@ public class HomeActivity extends AppCompatActivity{
                     startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class ) );
                 }
                 else if ( position == 2) {
-                    // if clicked on Vegetarian -- Activity missing!!
+                    // if clicked on Vegetarian
                     startActivity ( new Intent (HomeActivity.this, CategoryVeganActivity.class ) );
                 }
                 else if ( position == 3) {
-                    // if clicked on Meat -- Activity missing!!
+                    // if clicked on Meat
                     startActivity ( new Intent (HomeActivity.this, CategoryMeatActivity.class ) );
                 }
                 else if ( position == 4) {
-                    // if clicked on Dessert -- Activity missing!!
+                    // if clicked on Dessert
                     startActivity ( new Intent (HomeActivity.this, CategoryDessertActivity.class ) );
                 }
             }
@@ -88,6 +103,13 @@ public class HomeActivity extends AppCompatActivity{
     }
 
 
+    /*
+     * It's a recyclerView for the single popular recipe
+     * Here the categories are loaded into an arraylist
+     * All popular recipe are provided with an onclick
+     *
+     * @see      List with the category
+     * */
     private void recyclerViewPopular () {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager ( this, LinearLayoutManager.HORIZONTAL, false );
         recyclerViewPopularList = findViewById ( R.id.recyclerViewPopular);
@@ -108,29 +130,33 @@ public class HomeActivity extends AppCompatActivity{
 
     }
 
+    /*
+     * This is the OnclickListener for the individual popular recipes
+     * When the user clicks on one of the popular recipes, he will be redirected to the corresponding page
+     * */
     private void setPopularOnclickListener() {
         popularOnclickListener = new PopularAdapter.PopularRecyclerViewClickListener() {
             @Override
             public void onclickPopular(View view, int position) {
                 if ( position == 0){
-                    // if clicked on 1. popular recipe -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryBreakfastActivity.class) );
+                    // if clicked on 1. popular recipe
+                    startActivity ( new Intent (HomeActivity.this, CremeBruleeActivity.class) );
                 }
                 else if ( position == 1) {
-                    // if clicked on 2. popular recipe -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class) );
+                    // if clicked on 2. popular recipe
+                    startActivity ( new Intent (HomeActivity.this, FrenchToastActivity.class) );
                 }
                 else if ( position == 2) {
-                    // if clicked on 3. popular recipe -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class) );
+                    // if clicked on 3. popular recipe
+                    startActivity ( new Intent (HomeActivity.this, GemueseCurryActivity.class) );
                 }
                 else if ( position == 3) {
-                    // if clicked on 4. popular recipe -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class) );
+                    // if clicked on 4. popular recipe
+                    startActivity ( new Intent (HomeActivity.this, CabonaraActivity.class) );
                 }
                 else if ( position == 4) {
-                    // if clicked on 4. popular recipe -- Activity missing!!
-                    startActivity ( new Intent (HomeActivity.this, CategoryPastaActivity.class) );
+                    // if clicked on 4. popular recipe
+                    startActivity ( new Intent (HomeActivity.this, LachsPastaActivity.class) );
                 }
             }
         };
