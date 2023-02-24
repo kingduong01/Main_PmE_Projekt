@@ -17,6 +17,11 @@ import PmE.Kochapp.R;
 
 import java.util.ArrayList;
 
+/**
+ * Class     : CategoryBreakfastActivity
+ * Methods   : recyclerViewBreakfast(), setCategoryBreakfastOnclickListener()
+ *
+ * */
 public class CategoryBreakfastActivity extends AppCompatActivity {
     private RecyclerView.Adapter breakfastAdapter;
 
@@ -31,6 +36,14 @@ public class CategoryBreakfastActivity extends AppCompatActivity {
         recyclerViewBreakfast();
     }
 
+
+    /**
+    * It's a recyclerView for the category Breakfast
+    * Here the recipes are loaded into an arraylist
+    * All recipes are provided with an onclick
+    *
+    * @See      List with the receipts and there information
+    * */
     private void recyclerViewBreakfast() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager (this, LinearLayoutManager.VERTICAL, false);
         recyclerViewBreakfastList = findViewById ( R.id.recyclerViewBreakfast);
@@ -47,6 +60,10 @@ public class CategoryBreakfastActivity extends AppCompatActivity {
         recyclerViewBreakfastList.setAdapter ( breakfastAdapter );
     }
 
+    /**
+    * This is the OnclickListener for the individual recipes from the Breakfast category.
+    * When the user clicks on one of the recipes, he will be redirected to the corresponding page.
+    * */
     private void setCategoryBreakfastOnclickListener(){
         categoryBreakfastOnclickListener = new CategoryBreakfastAdapter.CategoryBreakfastRecyclerViewClickListener()
         {

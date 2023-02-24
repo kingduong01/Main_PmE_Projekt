@@ -32,14 +32,22 @@ public class CategoryDessertAdapter extends RecyclerView.Adapter < CategoryDesse
         return new CategoryDessertAdapter.ViewHolder( inflate );
     }
 
-
-
+    /**
+     * This method is called by the RecyclerView to display the data at the specified position.
+     * It updates the contents of the ViewHolder to reflect the item at the given position.
+     *
+     * @param holder The ViewHolder which should be updated to represent the contents of the item at the given position.
+     * @param position The position of the item within the adapter's data set.
+     */
     @Override
     public void onBindViewHolder(@NonNull CategoryDessertAdapter.ViewHolder holder, int position) {
+
+        // Set the title, cooking time, and difficulty of the dessert item in the ViewHolder
         holder.titleDessert.setText ( dessertDomains.get ( position ) .getTitleDessert() );
         holder.cookingTimeDessert.setText ( dessertDomains.get (position ) .getCookingTimeDessert() );
         holder.difficultyDessert.setText ( dessertDomains.get ( position ) .getDifficultyDessert() );
 
+        // Get the ID of the drawable resource for the dessert item image
         int drawableRessrceId = holder.itemView.getContext()
                 .getResources()
                 .getIdentifier ( dessertDomains.get( position ) .getImgeDessert(),
@@ -51,17 +59,23 @@ public class CategoryDessertAdapter extends RecyclerView.Adapter < CategoryDesse
                 .into ( holder.imageCategoryDessert );
     }
 
-
-
     @Override
     public int getItemCount() {
         return dessertDomains.size();
     }
 
+    /**
+     * The ViewHolder class holds references to the views that make up each item in the RecyclerView.
+     * It also implements an OnClickListener to handle clicks on each item.
+     */
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView titleDessert, cookingTimeDessert, difficultyDessert;
         ImageView imageCategoryDessert;
 
+        /**
+         * Constructor for the ViewHolder class.
+         * @param itemView The View that represents each item in the RecyclerView.
+         */
         public ViewHolder ( @NonNull View itemView ) {
             super ( itemView );
             titleDessert = itemView.findViewById ( R.id.categoryListTitle_id);
@@ -71,9 +85,14 @@ public class CategoryDessertAdapter extends RecyclerView.Adapter < CategoryDesse
 
             itemView.setOnClickListener( this );
         }
-
+        /**
+         * Override of the onClick method from the OnClickListener interface.
+         * @param view The View that was clicked.
+         */
         @Override
         public void onClick ( View view ) {
+            // Call the onclickCategoryDessert method on the categoryDessertOnclickListener,
+            // passing in the clicked view and the position of the ViewHolder in the adapter
             categoryDessertOnclickListener.onclickCategoryDessert ( view, getAdapterPosition() );
 
         }

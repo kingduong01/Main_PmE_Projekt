@@ -36,7 +36,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
 
-    /*
+    /**
+     * Binds the data to the view positions in the RecyclerView.
+     *
+     * @param holder    ViewHolder containing the view to which data is to be bound
+     * @param position  Position of the view in RecyclerView
      */
     @Override
     public void onBindViewHolder( @NonNull ViewHolder holder, int position ) {
@@ -83,11 +87,19 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
 
 
+    /**
+     * ViewHolder-Klasse für die Ansichtselemente im RecyclerView.
+     */
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView categoryName;
         ImageView categoryImage;
         ConstraintLayout mainLayout;
 
+        /**
+         * Konstruktor für den ViewHolder.
+         *
+         * @param itemView  Ansichtselement, das in den ViewHolder eingefügt wird
+         */
         public ViewHolder ( @NonNull View itemView ) {
             super ( itemView );
 
@@ -98,6 +110,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             itemView.setOnClickListener ( this );
         }
 
+        /**
+         * Handles clicking on a category.
+         *
+         * @param view      View item that was clicked
+         */
         @Override
         public void onClick ( View view ) {
             categoryOnclickListener.onclickCategory ( view, getAdapterPosition () );
