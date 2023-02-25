@@ -51,9 +51,9 @@ public class CategoryVeganActivity extends  AppCompatActivity{
         setCategoryVeganOnclickListener();
 
         ArrayList <CategoryVeganDomain> veganList = new ArrayList<>();
-        veganList.add ( new CategoryVeganDomain ( "Salat", "image_vegan_salat", "15 min", "Einfach" ) );
-        veganList.add ( new CategoryVeganDomain ( "GemüseCurry", "image_vegan_gemuesecurry", "35 min", "Einfach" ) );
-        veganList.add ( new CategoryVeganDomain ( "Kartoffelauflauf", "image_vegan_kartoffelauflauf", "55 Minuten", "Einfach" ) );
+        veganList.add ( new CategoryVeganDomain ( "Salat", "image_vegan_salat", "15 min", "Einfach" ,"Salat Rezept") );
+        veganList.add ( new CategoryVeganDomain ( "GemüseCurry", "image_vegan_gemuesecurry", "35 min", "Einfach" , " Gemüse Curry Rezept" ) );
+        veganList.add ( new CategoryVeganDomain ( "Kartoffelauflauf", "image_vegan_kartoffelauflauf", "55 Minuten", "Einfach", "Kartoffelauflauf Rezept" ) );
 
         veganAdapter = new CategoryVeganAdapter ( veganList, categoryVeganOnclickListener);
         recyclerViewVeganList.setAdapter ( veganAdapter );

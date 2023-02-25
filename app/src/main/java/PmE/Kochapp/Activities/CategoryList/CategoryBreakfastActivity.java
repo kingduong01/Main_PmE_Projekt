@@ -52,9 +52,9 @@ public class CategoryBreakfastActivity extends AppCompatActivity {
         setCategoryBreakfastOnclickListener();
 
         ArrayList < CategoryBreakfastDomain > breakfastList = new ArrayList<>();
-        breakfastList.add ( new CategoryBreakfastDomain ( "Pancake", "image_breakfast_pancake", "10 min", "Einfach" ) );
-        breakfastList.add ( new CategoryBreakfastDomain ( "Blow", "image_breakfastblow", "15 min", "Einfach" ) );
-        breakfastList.add ( new CategoryBreakfastDomain ( "French Toast", "image_popular_french_toast", "15 Minuten", "Einfach" ) );
+        breakfastList.add ( new CategoryBreakfastDomain ( "Pancake", "image_breakfast_pancake", "10 min", "Einfach", "Panke Beschreibung" ) );
+        breakfastList.add ( new CategoryBreakfastDomain ( "Blow", "image_breakfastblow", "15 min", "Einfach", "rezept hierfür" ) );
+        breakfastList.add ( new CategoryBreakfastDomain ( "French Toast", "image_popular_french_toast", "15 Minuten", "Einfach", "French Toast Rezept" ) );
 
         breakfastAdapter = new CategoryBreakfastAdapter ( breakfastList, categoryBreakfastOnclickListener);
         recyclerViewBreakfastList.setAdapter ( breakfastAdapter );

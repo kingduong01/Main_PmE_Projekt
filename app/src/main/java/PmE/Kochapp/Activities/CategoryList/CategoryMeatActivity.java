@@ -51,9 +51,9 @@ public class CategoryMeatActivity extends  AppCompatActivity{
         setCategoryMeatOnclickListener();
 
         ArrayList <CategoryMeatDomain> meatList = new ArrayList<>();
-        meatList.add ( new CategoryMeatDomain ( "Schnitzel", "image_meat_schnitzel", "30 min", "Mittel" ) );
-        meatList.add ( new CategoryMeatDomain ( "Lasagne", "image_meat_lasagne", "100 min", "Mittel" ) );
-        meatList.add ( new CategoryMeatDomain ( "Hackbraten", "image_meat_hackbraten", "85 Minuten", "Mittel" ) );
+        meatList.add ( new CategoryMeatDomain ( "Schnitzel", "image_meat_schnitzel", "30 min", "Mittel" ,"Rezept Schnitzel" ) );
+        meatList.add ( new CategoryMeatDomain ( "Lasagne", "image_meat_lasagne", "100 min", "Mittel", "rezept Lasagne" ) );
+        meatList.add ( new CategoryMeatDomain ( "Hackbraten", "image_meat_hackbraten", "85 Minuten", "Mittel", "rezept Hackbraten" ) );
 
         meatAdapter = new CategoryMeatAdapter ( meatList, categoryMeatOnclickListener);
         recyclerViewMeatList.setAdapter ( meatAdapter );

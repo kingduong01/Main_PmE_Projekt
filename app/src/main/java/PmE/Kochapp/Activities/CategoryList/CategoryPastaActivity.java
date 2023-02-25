@@ -51,9 +51,9 @@ public class CategoryPastaActivity extends  AppCompatActivity{
         setCategoryPastaOnclickListener();
 
         ArrayList <CategoryPastaDomain> pastaList = new ArrayList<>();
-        pastaList.add ( new CategoryPastaDomain ( "Bolognese", "image_pasta_bolognesee", "30 min", "Einfach" ) );
-        pastaList.add ( new CategoryPastaDomain ( "Cabonara", "image_popular_spaghetti_carbonara", "20 min", "Einfach" ) );
-        pastaList.add ( new CategoryPastaDomain ( "LachsPasta", "image_popular_nudeln_mit_lachs", "20 Minuten", "Einfach" ) );
+        pastaList.add ( new CategoryPastaDomain ( "Bolognese", "image_pasta_bolognesee", "30 min", "Einfach" , "Kochanleitung für Bolognese") );
+        pastaList.add ( new CategoryPastaDomain ( "Cabonara", "image_popular_spaghetti_carbonara", "20 min", "Einfach","Kochanleitung für Carbonara" ) );
+        pastaList.add ( new CategoryPastaDomain ( "LachsPasta", "image_popular_nudeln_mit_lachs", "20 Minuten", "Einfach", "Kochanleitung für Nudeln mit Lachs" ) );
 
         pastaAdapter = new CategoryPastaAdapter ( pastaList, categoryPastaOnclickListener);
         recyclerViewPastaList.setAdapter ( pastaAdapter );

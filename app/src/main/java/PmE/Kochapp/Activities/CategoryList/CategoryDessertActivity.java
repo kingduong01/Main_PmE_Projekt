@@ -41,7 +41,7 @@ public class CategoryDessertActivity extends AppCompatActivity {
      * Here the recipes are loaded into an arraylist
      * All recipes are provided with an onclick
      *
-     * @See      Liste with the receipts and there information
+     * @See      List with the recipes and their information
      * */
     private void recyclerViewDessert() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager (this, LinearLayoutManager.VERTICAL, false);
@@ -51,9 +51,9 @@ public class CategoryDessertActivity extends AppCompatActivity {
         setCategoryDessertOnclickListener();
 
         ArrayList <CategoryDessertDomain> dessertList = new ArrayList<>();
-        dessertList.add ( new CategoryDessertDomain ( "Creme Brulee", "image_popular_cremebrulee", "90 min", "Einfach" ) );
-        dessertList.add ( new CategoryDessertDomain ( "Panna Cotta", "image_dessert_pannacotta", "30 min", "Einfach" ) );
-        dessertList.add ( new CategoryDessertDomain ( "Panna Cotta", "image_dessert_mousseauchocolat", "20 Minuten", "Einfach" ) );
+        dessertList.add ( new CategoryDessertDomain ( "Creme Brulee", "image_popular_cremebrulee", "90 min", "Mittel", "Creme Brulee Rezept" ) );
+        dessertList.add ( new CategoryDessertDomain ( "Panna Cotta", "image_dessert_pannacotta", "30 min", "Einfach", "Panna Cotta Rezept" ) );
+        dessertList.add ( new CategoryDessertDomain ( "mousse au chocolat", "image_dessert_mousseauchocolat", "20 Minuten", "Einfach" ," Mousse au chocolat Rezept") );
 
         dessertAdapter = new CategoryDessertAdapter ( dessertList, categoryDessertOnclickListener);
         recyclerViewDessertList.setAdapter ( dessertAdapter );

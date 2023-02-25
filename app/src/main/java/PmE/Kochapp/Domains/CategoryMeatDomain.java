@@ -5,12 +5,14 @@ public class CategoryMeatDomain {
     private String imgeMeat;
     private String cookingTimeMeat;
     private String difficultyMeat;
+    private String descriptionMeat;
 
-    public CategoryMeatDomain(String titleMeat, String imgeMeat, String cookingTimeMeat, String difficultyMeat) {
+    public CategoryMeatDomain(String titleMeat, String imgeMeat, String cookingTimeMeat, String difficultyMeat, String descriptionMeat ) {
         this.titleMeat = titleMeat;
         this.imgeMeat = imgeMeat;
         this.cookingTimeMeat = cookingTimeMeat;
         this.difficultyMeat = difficultyMeat;
+        this.descriptionMeat = descriptionMeat;
     }
 
     public String getTitleMeat() {
@@ -28,4 +30,6 @@ public class CategoryMeatDomain {
     public String getDifficultyMeat() {
         return difficultyMeat;
     }
+
+    public String getDescriptionMeat() { return descriptionMeat; }
 }
